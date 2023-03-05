@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">Form</div>
         <div class="card-body">
-            <form wire:submit.prevent="store">
+            <form wire:submit.prevent="update">
                 @csrf
                 <div class="mb-2">
                     <label for="title" class="form-label">Title</label>
@@ -33,7 +33,7 @@
                         </div>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-primary">Post</button>
+                <button type="submit" class="btn btn-warning">Update</button>
             </form>
         </div>
     </div>

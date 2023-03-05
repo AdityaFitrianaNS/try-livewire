@@ -14,7 +14,7 @@
 </head>
 <body>
     <main class="py-5">
-        @yield('content')
+       {{ $slot }}
     </main>
 
     @stack('scripts')

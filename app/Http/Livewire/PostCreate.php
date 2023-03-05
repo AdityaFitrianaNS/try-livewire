@@ -7,9 +7,7 @@ use Livewire\Component;
 
 class PostCreate extends Component
 {
-    public $title;
-    public $body;
-    public $slug;
+    public $title, $body, $slug;
 
     public function render()
     {
@@ -35,5 +33,8 @@ class PostCreate extends Component
         $this->slug = NULL;
 
         session()->flash('success', 'Post successfully create');
+
+        // Event Listener Livewire
+        $this->emit('postStore');
     }
 }
